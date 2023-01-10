@@ -5,7 +5,7 @@
 chars=( {a..z} )
 for ((i=0; i<$1; i++))
 do
-  mkdir -p "folder_${chars[i]}"
+  mkdir -p "file_${chars[i]}"
 done
 
 if [[ $1 == 1 ]] 
@@ -17,6 +17,6 @@ fi
 
 for ((i=0; i<$1; i++))
 do
-  ls -d "folder_${chars[i]}" | tr "\n" "," 
-done | sed 's/.$//' 
+  ls -d "file_${chars[i]}" | tr "\n" ", " | sed 's/,/, /'
+done | sed 's/. $//' 
 printf "\n"
