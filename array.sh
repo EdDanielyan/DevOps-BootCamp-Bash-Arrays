@@ -13,7 +13,5 @@ then
     echo -n "$1 folder created: "
 else
     echo -n "$1 folders created: "
+    ls -d folder_*  | tr ":\n" "," | sed 's/. $//'
 fi
-
-ls -d folder_*  | tr ":\n" ", " | sed 's/. $//'
-
