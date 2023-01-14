@@ -17,6 +17,6 @@ fi
 
 for ((i=0; i<$1; i++))
 do
-  ls -d "folder_${chars[i]}" | tr "\n" ", " | sed 's/,/, /'
+  find "folder_${chars[i]}" | tr "\n" ", " | sed 's/,/, /'
 done | sed 's/. $//' 
 printf "\n"
