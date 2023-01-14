@@ -2,7 +2,7 @@
 
 # Place your code here
 
-chars=( {a..z} )
+chars=( {a..a} )
 for ((i=0; i<$1; i++))
 do
   mkdir -p "folder_${chars[i]}"
