@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Place your code here
+# Place your code here!
 
 chars=( {e..a} )
 for ((i=0; i<$1; i++))
