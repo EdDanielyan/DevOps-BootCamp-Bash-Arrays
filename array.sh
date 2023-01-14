@@ -15,8 +15,11 @@ else
     echo -n "$1 folders created: "
 fi
 
-for ((i=0; i<$1; i++))
-do
-  find "folder_${chars[i]}" | tr "\n" ", " | sed 's/,/, /'
-done | sed 's/. $//' 
+
+for ((i=0; i<$1; i++)); do
+  echo -n "folder_${chars[i]}"
+  if [ $i -lt $(($1-1)) ]; then
+    echo -n ", "
+  fi
+done
 printf "\n"
